@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #1a1a1a;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,10 +24,8 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  background-color: #1a1a1a;
 }
 
 h1 {
@@ -54,15 +52,60 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+.react-flow__node-custom {
+  background: #2D2D2D;
+  border-radius: 8px;
+  border: 1px solid #444;
+  color: #f0f0f0;
+  padding: 15px;
+  font-size: 12px;
+  min-width: 250px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.react-flow__node-custom strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.custom-node-content-placeholder {
+  flex-grow: 1;
+  background-color: #202020;
+  border-radius: 4px;
+  min-height: 150px;
+}
+
+.react-flow__handle {
+  width: 8px;
+  height: 8px;
+  background: #555;
+  border: none;
+}
+
+.react-flow__handle-connecting {
+  background: #646cff;
+}
+
+.react-flow__edge path {
+  stroke: #888;
+  stroke-width: 2;
+}
+
+.react-flow__edge .react-flow__arrowhead path {
+  fill: #888;
+  stroke: none;
+}
+
+h1, button, a, p, .card, .logo {
+  /* display: none; or remove specific styles */
 }
